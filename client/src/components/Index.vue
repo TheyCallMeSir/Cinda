@@ -1,6 +1,10 @@
 <template>
  <div>
-  HASAN
+  <div>
+      <img src="../assets/festival.jpg">festival<img>
+      <p>Events for Locals</p>
+      <a href = "#/finder">Find People</a>
+  </div>
  </div>
 </template>
 

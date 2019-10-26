@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Hasan from '@/components/hasan'
+import Index from '@/components/Index'
+import Finder from '@/components/Finder'
 
 Vue.use(Router)
 
@@ -13,9 +14,14 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/hasan',
-      name: 'hasan',
-      component: Hasan
+      path: '/index',
+      name: 'index',
+      component: Index
+    },
+    {
+      path: '/finder',
+      name: 'finder',
+      component: Finder
     }
   ]
 })
