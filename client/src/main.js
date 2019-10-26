@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import Hexagon from './components/shared/hexagon.vue'
+
 Vue.config.productionTip = false
+Vue.component('hexagon', Hexagon)
 
 /* eslint-disable no-new */
 new Vue({
