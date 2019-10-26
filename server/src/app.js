@@ -3,6 +3,9 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
 
+// import API Routers
+const main = require('./routers/main')
+
 // connecting to Database
 const mongoose = require('mongoose')
 const db = "mongodb+srv://admin:zFGRKXn4aHKfKdX@myproject-k5h8e.mongodb.net/Cinda?retryWrites=true"
@@ -15,8 +18,6 @@ mongoose.connect(db, err => {
     }
   });
 
-// import API Routers
-const main = require('./roters/main')
 
 const app = express()
 app.use(morgan('combined'))
