@@ -3,18 +3,22 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
 
+// import API Routers
+const main = require('./roters/main')
+
 const app = express()
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/posts', (req, res) => {
-  res.send(
-    [{
-      title: "Hello World!",
-      description: "Hi there! How are you?"
-    }]
-  )
-})
+// Set API Routes
+app.use('/api', [
+    main
+])
+
+// Catch all other routes and return the index file
+app.get('/*', (req, res) => {
+    res.send("Error!");
+});
 
 app.listen(process.env.PORT || 8081)
